@@ -1,0 +1,177 @@
+:root {
+  --bg: #0b0e14;
+  --card: #121826;
+  --text: #e6e8ee;
+  --muted: #9aa4b2;
+  --brand: #7c5cff; /* Accent */
+  --brand-2: #22d3ee; /* Secondary Accent */
+  --ring: rgba(124, 92, 255, 0.35);
+}
+
+:root.light {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0b1220;
+  --muted: #475569;
+  --brand: #6d28d9;
+  --brand-2: #0891b2;
+  --ring: rgba(109, 40, 217, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.navbar {
+  background: rgba(18, 24, 38, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.navbar.light {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.nav-link {
+  color: var(--text) !important;
+  opacity: 0.9;
+}
+
+.nav-link.active {
+  color: var(--brand-2) !important;
+}
+
+.btn-brand {
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  color: #fff;
+  border: none;
+  box-shadow: 0 10px 20px var(--ring);
+}
+
+.btn-ghost {
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+}
+
+.section {
+  padding: 90px 0;
+}
+
+.card {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.badge-tech {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: var(--text);
+  padding: 0.45rem 0.65rem;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.hero {
+  min-height: 92vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+      1200px 600px at 10% -10%,
+      rgba(124, 92, 255, 0.15),
+      transparent
+    ),
+    radial-gradient(
+      1000px 600px at 100% 0%,
+      rgba(34, 211, 238, 0.12),
+      transparent
+    );
+  padding-top: 72px; /* offset for fixed navbar */
+}
+
+.hero h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero p.lead {
+  color: var(--muted);
+}
+
+.section-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.section-sub {
+  color: var(--muted);
+}
+
+.avatar {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.18);
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* For light mode */
+:root.light .avatar {
+  border: 4px solid rgba(0, 0, 0, 0.18);
+}
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Contact form */
+.form-control,
+.form-select {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--brand-2);
+  box-shadow: 0 0 0 0.25rem var(--ring);
+}
+
+/* Light mode helpers (applied when :root has .light) */
+:root.light .navbar {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+:root.light .card {
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+:root.light .btn-ghost {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+:root.light .form-control,
+:root.light .form-select {
+  background: #fff;
+  color: #0b1220;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+:root.light .navbar .nav-link {
+  color: #0b1220 !important;
+}
