@@ -30,7 +30,6 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <!-- Navbar -->
     <nav
       id="topnav"
       class="navbar navbar-expand-lg fixed-top"
@@ -92,7 +91,7 @@
       </div>
     </nav>
 
-    <!-- Hero -->
+  
     <header id="home" class="hero">
       <div class="container">
         <div class="row align-items-center g-4">
@@ -156,7 +155,7 @@
       </div>
     </header>
 
-    <!-- About -->
+  
     <section id="about" class="section">
       <div class="container">
         <div class="row align-items-center g-4">
@@ -199,7 +198,7 @@
       </div>
     </section>
 
-    <!-- Skills -->
+  
     <section id="skills" class="section">
       <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
@@ -225,7 +224,7 @@
       </div>
     </section>
 
-    <!-- Projects -->
+  
     <section id="projects" class="section">
       <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
@@ -236,7 +235,7 @@
 
     
 
-    <!-- Contact -->
+    
     <section id="contact" class="section">
       <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
@@ -318,7 +317,7 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    
     <footer class="footer py-4">
       <div
         class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
@@ -333,7 +332,7 @@
       </div>
     </footer>
 
-    <!-- Scripts -->
+  
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -341,15 +340,15 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-      // AOS init
+      
       AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
 
-      // Year
+    
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      // Theme toggle with persistence
+      
       (function () {
-        const root = document.documentElement; // <html>
+        const root = document.documentElement; 
         const toggleBtn = document.getElementById("themeToggle");
         const stored = localStorage.getItem("theme");
 
@@ -367,7 +366,7 @@
           }
         }
 
-        // Load user preference or system
+        
         const prefersLight = window.matchMedia(
           "(prefers-color-scheme: light)"
         ).matches;
@@ -381,7 +380,7 @@
         });
       })();
 
-      // Scrollspy
+      
       const dataSpyList = [].slice.call(
         document.querySelectorAll('[data-bs-spy="scroll"]')
       );
@@ -390,7 +389,7 @@
           new bootstrap.ScrollSpy(dataSpyEl);
       });
 
-      // Contact form (demo only)
+      
       const form = document.getElementById("contactForm");
       const alertBox = document.getElementById("formAlert");
       form.addEventListener("submit", function (e) {
@@ -405,7 +404,7 @@
             '<span class="text-danger">Please fill all fields.</span>';
           return;
         }
-        // You can swap this with Formspree/EmailJS or your backend
+        
         alertBox.innerHTML =
           '<span class="text-success">Thanks! Your message has been queued (demo).</span>';
         form.reset();
