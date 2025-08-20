@@ -173,3 +173,8 @@ body {
 :root.light .navbar .nav-link {
   color: #0b1220 !important;
 }
+.card a[href^="mailto"] {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
