@@ -3,8 +3,8 @@
   --card: #121826;
   --text: #e6e8ee;
   --muted: #9aa4b2;
-  --brand: #7c5cff; /* Accent */
-  --brand-2: #22d3ee; /* Secondary Accent */
+  --brand: #7c5cff; 
+  --brand-2: #22d3ee; 
   --ring: rgba(124, 92, 255, 0.35);
 }
 
@@ -97,7 +97,7 @@ body {
       rgba(34, 211, 238, 0.12),
       transparent
     );
-  padding-top: 72px; /* offset for fixed navbar */
+  padding-top: 72px; 
 }
 
 .hero h1 {
@@ -128,7 +128,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* For light mode */
+
 :root.light .avatar {
   border: 4px solid rgba(0, 0, 0, 0.18);
 }
@@ -137,7 +137,6 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Contact form */
 .form-control,
 .form-select {
   background: rgba(255, 255, 255, 0.02);
@@ -151,7 +150,6 @@ body {
   box-shadow: 0 0 0 0.25rem var(--ring);
 }
 
-/* Light mode helpers (applied when :root has .light) */
 :root.light .navbar {
   background: rgba(255, 255, 255, 0.8);
 }
